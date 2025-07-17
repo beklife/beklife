@@ -1,0 +1,32 @@
+---
+import BaseHead from '@/components/layout/BaseHead.astro'
+import Header from '@/components/layout/Header.astro'
+
+import Footer from '@/components/layout/Footer.astro'
+import ThemeProvider from '@/components/layout/ThemeProvider.astro'
+import { SITE_DESCRIPTION, SITE_TITLE } from '../consts'
+
+const { title } = Astro.props
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead
+      title={`${title} - ${SITE_TITLE}`}
+      description={SITE_DESCRIPTION}
+    />
+  </head>
+  <body class="flex justify-center bg-background">
+    <ThemeProvider />
+    <div
+      class="flex min-h-screen w-screen max-w-[60rem] flex-col items-center px-6 pb-10 pt-7 font-satoshi text-[0.92rem] leading-relaxed sm:px-10 lg:px-10"
+    >
+      <Header />
+      <main class="flex w-full flex-col gap-y-10">
+        <slot />
+      </main>
+      <Footer />
+    </div>
+  </body>
+</html>

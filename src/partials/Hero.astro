@@ -1,0 +1,56 @@
+---
+import { HeroSection } from '@/components/ui/HeroSection'
+import Label from '@/components/ui/Label.astro'
+import { Icon } from 'astro-icon/components'
+import { Image } from 'astro:assets'
+
+import avatar from '@/assets/images/avatar.png'
+---
+
+<HeroSection>
+  <Image
+    src={avatar}
+    alt="profile photo"
+    class="h-60 w-auto rounded-full bg-zinc-600 dark:bg-slate-100 p-1"
+    loading="eager"
+  />
+  <a
+    href="mailto:bek.life@hotmail.com"
+    class="flex flex-row items-center gap-x-3 rounded-3xl border border-input px-4 py-2 text-sm shadow-sm transition-all hover:shadow-md"
+  >
+    <span class="relative flex items-center justify-center">
+      <span
+        class="absolute inline-flex h-2 w-2 animate-ping rounded-full border border-green-400 bg-green-400 opacity-75"
+      ></span>
+      <span class="relative inline-flex h-2 w-2 rounded-full bg-green-400"
+      ></span>
+    </span>
+
+    <p class="font-medium">Looking for job opportunities!</p>
+  </a>
+  <h1 class="text-3xl font-bold">Asilbek Tukhtaev</h1>
+  <div class="flex flex-wrap justify-center gap-x-7 gap-y-3">
+    <Label title="Infolytics AG">
+      <Icon slot="icon" name="mdi:work" size={20} />
+    </Label>
+    <Label title="Cologne">
+      <Icon slot="icon" name="mdi:location" size={20} />
+    </Label>
+    <Label
+      title="Connect on LinkedIn"
+      as="a"
+      href="https://de.linkedin.com/in/asilbek-tukhtaev"
+      target="_blank"
+    >
+      <Icon slot="icon" name="mdi:linkedin" size={25} />
+    </Label>
+    <Label
+      title="GitHub"
+      as="a"
+      href="https://github.com/beklife"
+      target="_blank"
+    >
+      <Icon slot="icon" name="mdi:github" size={25} />
+    </Label>
+  </div>
+</HeroSection>

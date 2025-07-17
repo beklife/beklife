@@ -1,0 +1,86 @@
+---
+import { Link } from '@/components/ui/Link'
+import ProjectCard from '@/components/ui/ProjectCard.astro'
+import ProjectSkills from '@/components/ui/ProjectSkills.astro'
+import Section from '@/components/ui/Section.astro'
+import SkillLayout from '@/components/ui/SkillLayout.astro'
+import Base from '@/layouts/Base.astro'
+import Hero from '@/partials/Hero.astro'
+
+const languages = ['Java', 'Python', 'JavaScript', 'TypeScript']
+const frontend = ['Angular']
+const backend = ['Spring Boot', 'Django']
+const others = [
+  'Docker',
+  'GitLab',
+  'GitHub',
+  'GitLab CI',
+  'GitHub Actions',
+  'Jira',
+  'Playwright',
+  'Cucumber',
+  'REST-APIs',
+]
+---
+
+<Base title="Home">
+  <Hero />
+
+  <Section title="About">
+    <p class="text-muted-foreground text-justify">
+      <b>Welcome to my personal homepage!</b><br />
+      I’m an enthusiastic software developer with a strong passion for building efficient
+      and user-friendly applications. My journey into tech began during my school
+      years in Uzbekistan, where I first became curious about how software works.<br
+      />
+      Since moving to Germany, I’ve focused on deepening my knowledge through both
+      academic and practical experience. I completed my vocational training (Ausbildung)
+      as an IT specialist in application development at
+      <Link href="https://infolytics.com/">Infolytics AG</Link>, where I
+      currently contribute to the development of modern web applications using
+      Angular, Spring Boot, and tools like Docker, GitLab, and Playwright.<br />
+      My work focuses on automation, clean code, and agile collaboration. My main
+      interests include full-stack development, test automation, and software architecture.<br
+      />
+      Outside of work, I enjoy cooking, strength training, and exploring new technologies.
+      When I’m not coding, you’ll find me at the bouldering gym, playing beach volleyball,
+      or in the kitchen. Feel free to explore my timeline to learn more about my
+      skills, projects, and journey!
+    </p>
+  </Section>
+
+  <Section title="Skills">
+    <SkillLayout title="Languages" skills={languages} />
+    <SkillLayout title="Frontend" skills={frontend} />
+    <SkillLayout title="Backend" skills={backend} />
+    <SkillLayout title="Others Technologies" skills={others} />
+  </Section>
+
+  <Section title="Projects">
+    <div class="flex w-full flex-col gap-y-4">
+      <ProjectCard heading="Test Automation Tool for AGLA Module Validation - Commercial Project">
+        Developed an external test automation tool for validating calculation
+        results in the AGLA module for BIH, a German federal organization. Built
+        with Angular and Docker, the tool was integrated into a GitLab CI/CD
+        pipeline. Designed reusable components, implemented form validations,
+        and enabled REST-based backend communication. Additionally, I wrote
+        Playwright-based system tests to automate key user workflows and improve
+        regression testing. The project focused on increasing test coverage,
+        reducing manual effort, and ensuring data consistency across calculation
+        scenarios.
+        <ProjectSkills
+          slot="tags"
+          skills={[
+            'Angular',
+            'Docker',
+            'Playwright',
+            'GitLab CI/CD',
+            'REST APIs',
+            'Test Automation',
+            'Form Validation',
+          ]}
+        />
+      </ProjectCard>
+    </div>
+  </Section>
+</Base>

@@ -16,7 +16,6 @@ import icon from 'astro-icon'
 export default defineConfig({
   site: 'https://beklife.github.io',
   base: '/',
-  
   integrations: [
     tailwind(),
     react(),

@@ -1,0 +1,96 @@
+---
+import { TimelineContainer } from '@/components/timeline/TimelineContainer'
+import { TimelineEntry } from '@/components/timeline/TimelineEntry'
+import Section from '@/components/ui/Section.astro'
+import Base from '@/layouts/Base.astro'
+import Hero from '@/partials/Hero.astro'
+---
+
+<Base title="Timeline">
+  <Hero />
+
+  <Section title="Experience">
+    <TimelineContainer>
+      <TimelineEntry
+        title="Software Developer"
+        subTitle="Infolytics AG"
+        dateFrom="June 2025"
+        dateTo="Present"
+      >
+        <ul class="ml-4 list-disc text-muted-foreground">
+          <li>
+            Contribute to the front-end implementation of a large Java and
+            Angular project with the product team.
+          </li>
+          <li>
+            Implement new features and bug fixes in close coordination with the
+            product team.
+          </li>
+          <li>
+            Engage in agile development, manage Jira tickets, contribute code
+            via GitLab merge requests, participate in code reviews, and
+            collaborate in Scrum meetings.
+          </li>
+        </ul>
+      </TimelineEntry>
+
+      <TimelineEntry
+        title="Apprentice Software Developer (Fachinformatiker für Anwendungsentwicklung)"
+        subTitle="Infolytics AG"
+        dateFrom="August 2022"
+        dateTo="June 2025"
+      >
+        <ul class="ml-4 list-disc text-muted-foreground">
+          <li>
+            Developed the AGLA-Test-Assistent, a frontend tool for the InANet
+            system, supporting BIH experts in validating AGLA module
+            calculations.
+          </li>
+          <li>
+            Created a user-friendly Angular interface for defining and testing
+            scenarios, with JSON-based storage for traceability.
+          </li>
+          <li>
+            Utilized Angular, Docker, Playwright, and GitLab for development and
+            testing.
+          </li>
+          <li>
+            Contributed to the "Dynamischer Personalplaner" (DPP) project,
+            supporting parallel and secure personnel data management with Spring
+            Boot and testing.
+          </li>
+          <li>
+            Engaged in agile processes, managing Jira tickets, and participating
+            in Scrum meetings.
+          </li>
+        </ul>
+      </TimelineEntry>
+    </TimelineContainer>
+  </Section>
+
+  <Section title="Education">
+    <TimelineContainer>
+      <TimelineEntry
+        title="Fachinformatiker für Anwendungsentwicklung (Apprentice)"
+        subTitle="Georg-Simon-Ohm-Berufskolleg"
+        dateFrom="August 2022"
+        dateTo="June 2025"
+      >
+        <ul class="ml-4 list-disc text-muted-foreground">
+          <li>
+            <strong>Major subjects:</strong> Technical Computer Science and Software
+            Development
+          </li>
+          <li>
+            Acquired skills in problem-solving, analytical thinking, and
+            programming with Java, Angular, and Spring Boot.
+          </li>
+          <li>
+            Participated in various technical projects and team collaborations,
+            including frontend and testing assignments.
+          </li>
+        </ul>
+      </TimelineEntry>
+    </TimelineContainer>
+  </Section>
+</Base>
